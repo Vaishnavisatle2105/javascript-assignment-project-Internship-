@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f4f6fb;
+  color: #172033;
+}
+
+.topbar {
+  background: #101828;
+  color: white;
+  padding: 22px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.subtitle {
+  margin-top: 5px;
+  color: #aab4c5;
+  font-size: 13px;
+}
+
+.status {
+  background: #193b31;
+  color: #8ce0b9;
+  border: 1px solid #28604e;
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 12px;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+  padding: 42px 0;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 35px;
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  color: #667085;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-size: clamp(36px, 6vw, 62px);
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+h1 span {
+  color: #475467;
+}
+
+.hero-text {
+  max-width: 650px;
+  color: #667085;
+  line-height: 1.6;
+}
+
+.primary-btn {
+  border: 0;
+  border-radius: 12px;
+  background: #172033;
+  color: white;
+  padding: 13px 17px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.primary-btn:hover {
+  opacity: .9;
+}
+
+.full {
+  width: 100%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.stat-card, .panel {
+  background: white;
+  border: 1px solid #e4e7ec;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(16, 24, 40, .04);
+}
+
+.stat-card {
+  padding: 21px;
+}
+
+.stat-card span {
+  color: #667085;
+  font-size: 13px;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.panel {
+  padding: 25px;
+  margin-bottom: 18px;
+}
+
+.panel h2 {
+  margin: 0 0 20px;
+  font-size: 22px;
+}
+
+label {
+  display: block;
+  color: #475467;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  margin-top: 7px;
+  padding: 13px;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #667085;
+}
+
+.analytics-list > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.analytics-list .highlight {
+  border: 0;
+  margin-top: 8px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f2f4f7;
+}
+
+.message {
+  min-height: 22px;
+  margin-top: 12px;
+  color: #087443;
+  font-size: 13px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.filter {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  color: #667085;
+  font-size: 11px;
+  padding: 12px;
+  border-bottom: 1px solid #eaecf0;
+}
+
+td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3445a8;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+pre {
+  margin: 0;
+  padding: 18px;
+  background: #101828;
+  color: #d1fadf;
+  border-radius: 12px;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  color: #98a2b3;
+  padding: 20px;
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding-top: 28px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+}

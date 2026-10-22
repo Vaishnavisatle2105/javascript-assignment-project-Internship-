@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Product Inventory & Analytics Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="brand">Inventory Analytics</div>
+      <div class="subtitle">Interactive Product Inventory & Analytics Dashboard</div>
+    </div>
+    <span class="status">● System Active</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">CAPSTONE PROJECT</p>
+        <h1>Manage products.<br><span>Understand inventory.</span></h1>
+        <p class="hero-text">
+          A JavaScript dashboard demonstrating prompts, conditions, loops,
+          functions, arrays, objects and core array methods.
+        </p>
+      </div>
+      <button id="promptAddBtn" class="primary-btn">＋ Quick Add with prompt()</button>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <span>Total Products</span>
+        <strong id="totalProducts">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Inventory Value</span>
+        <strong id="inventoryValue">$0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Affordable Items</span>
+        <strong id="affordableCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Average Price</span>
+        <strong id="averagePrice">$0</strong>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <div class="panel">
+        <div class="panel-title">
+          <div>
+            <p class="eyebrow">PRODUCT INPUT</p>
+            <h2>Add New Product</h2>
+          </div>
+        </div>
+
+        <form id="productForm">
+          <label>Product Name
+            <input id="productName" type="text" placeholder="e.g. Monitor" required>
+          </label>
+
+          <label>Price
+            <input id="productPrice" type="number" min="0" step="0.01" placeholder="150" required>
+          </label>
+
+          <button class="primary-btn full" type="submit">Add Product</button>
+        </form>
+
+        <div id="message" class="message"></div>
+      </div>
+
+      <div class="panel">
+        <p class="eyebrow">QUICK ANALYTICS</p>
+        <h2>Financial Overview</h2>
+
+        <div class="analytics-list">
+          <div><span>Total Inventory</span><strong id="analyticsTotal">$0</strong></div>
+          <div><span>5% Tax Estimate</span><strong id="taxEstimate">$0</strong></div>
+          <div><span>10% Discount</span><strong id="discountEstimate">$0</strong></div>
+          <div class="highlight"><span>After Discount</span><strong id="afterDiscount">$0</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">INVENTORY ROSTER</p>
+          <h2>Current Products</h2>
+        </div>
+        <label class="filter">
+          <input type="checkbox" id="affordableOnly">
+          Under $200 only
+        </label>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>PRODUCT</th>
+              <th>PRICE</th>
+              <th>CATEGORY</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <p class="eyebrow">TRANSFORMED REPORT</p>
+      <h2>Map Output</h2>
+      <pre id="reportOutput">[]</pre>
+    </section>
+  </main>
+
+  <footer>
+    JavaScript Curriculum Capstone • Built with HTML, CSS & JavaScript
+  </footer>
+
+  <script src="inventory-dashboard.js"></script>
+</body>
+</html>

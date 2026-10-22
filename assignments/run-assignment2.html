@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 2 Runner</title>
+</head>
+<body>
+  <h1>Assignment 2</h1>
+  <p>Open Developer Console and click the button.</p>
+  <button onclick="runAssignment()">Run Assignment 2</button>
+
+  <script>
+    function runAssignment() {
+      const billAmount = Number(prompt("Enter bill amount:"));
+      const tipPercentage = Number(prompt("Enter tip percentage:"));
+
+      if (Number.isNaN(billAmount) || Number.isNaN(tipPercentage)) {
+        console.log("Please enter valid numbers.");
+        return;
+      }
+
+      const tip = billAmount * (tipPercentage / 100);
+      const total = billAmount + tip;
+
+      console.log("Bill Amount: $" + billAmount);
+      console.log("Tip Percentage: " + tipPercentage + "%");
+      console.log("Tip Amount: $" + tip);
+      console.log("Total Bill: $" + total);
+    }
+  </script>
+</body>
+</html>
